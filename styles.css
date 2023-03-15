@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* ### Primary */
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --cyan-hover: hsl(178, 100%, 50%, 60%);
+
+  /* ### Neutral */
+
+  --very-dark-blue-main: hsl(217, 54%, 11%); /*  (main BG)*/
+  --very-dark-blue-card: hsl(216, 50%, 16%); /* (card BG) */
+  --very-dark-blue-line: hsl(215, 32%, 27%); /*  (line) */
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  display: flex;
+  background-color: var(--very-dark-blue-main);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* CARD */
+
+.card {
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  color: white;
+  background-color: var(--very-dark-blue-card);
+  width: 352px;
+  height: 600px;
+  border-radius: 10px;
+  flex-direction: column;
+  padding: 26px;
+}
+
+/* MAIN IMAGE */
+
+.image {
+  /* display: flex; */
+  min-height: 50%;
+  background-image: url("images/image-equilibrium.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+/* CONTENT */
+
+.content p {
+  font-size: 18px;
+  color: var(--soft-blue);
+}
+
+.content .price {
+  color: var(--cyan);
+}
+
+.content .time-left {
+  color: var(--soft-blue);
+}
+
+/* PRICES */
+.content .prices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+/* CREATOR */
+.creator {
+  /* padding-top: 30px;
+  padding-right: 90px; */
+  padding: 20px;
+  display: flex;
+  border-top: 1px solid var(--white);
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.creator .creator-image {
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: -70px;
+}
+
+.creator .colored {
+  color: var(--soft-blue);
+  margin-left: -30px;
+}
+
+.colored .non-color {
+  color: white;
+}
+
+/* HOVER EFFECTS */
+.content h2:hover,
+.creator .colored .non-color:hover {
+  cursor: pointer;
+  color: var(--cyan);
+}
+
+.overlay {
+  background-image: url("images/icon-view.svg");
+  background-image: no;
+  position: relative;
+  text-align: center;
+  margin: auto;
+  background-color: var(--cyan-hover);
+  height: 100%;
+  opacity: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay:hover {
+  opacity: 1;
+  cursor: pointer;
+  border-radius: inherit;
+}
